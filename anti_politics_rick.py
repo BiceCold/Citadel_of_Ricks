@@ -2,7 +2,7 @@ import discord
 import random
 
 
-TOKEN = 'NDM0MTY0NjY2OTY1Njg4MzMx.DbGa9A.4Oj5lM-epxmzL_U36UYmQt-VIrI'
+TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 client = discord.Client()
 
 def random_message():
