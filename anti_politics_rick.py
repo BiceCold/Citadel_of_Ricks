@@ -2,7 +2,7 @@ import discord
 import random
 
 
-TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 client = discord.Client()
 
 def random_message():
@@ -27,7 +27,18 @@ def random_message():
 
 wayup_url = 'http://i0.kym-cdn.com/photos/images/original/000/703/020/271.gif'
 embed = discord.Embed()
-politic_words = ["gun", "guns", "housing", "homeless", "regulation"]
+
+politic_words = ["gun",
+                 "guns",
+                 "housing",
+                 "homeless",
+                 "regulation",
+                 "restriction",
+                 "politic",
+                 "assault",
+                 "rifle",
+                 "protest"
+                 ]
 
 @client.event
 async def on_message(message):
@@ -43,17 +54,18 @@ async def on_message(message):
         msg2 = random_message().format(message)
         await client.send_message(message.channel, msg2)
 
-    if "gun" in message.content.lower():
-        msg3 = embed.set_image(url=wayup_url)
-        await client.send_message(message.channel, embed=embed)
+    message_string = message.content.lower()
 
-    if "guns" in message.content.lower():
-        msg3 = embed.set_image(url=wayup_url)
-        await client.send_message(message.channel, embed=embed)
+    for word in politic_words:
+        if message_string.find(word) != -1:
+            #content is matched, embed gif
+            embed.set_image(url=wayup_url)
+            await client.send_message(message.channel, embed=embed)
 
-    if "assault" in message.content.lower():
-        msg3 = embed.set_image(url=wayup_url)
-        await client.send_message(message.channel, embed=embed)
+        else:
+            #content is not matched, move on
+            continue
+
 
 
 @client.event
