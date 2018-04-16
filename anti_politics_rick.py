@@ -20,7 +20,19 @@ def random_message():
               "You backed the wrong conceptual horse",
               "Weddings are basically funerals with cake",
               "It's like the N word and the C word had a baby and it was raised by all the bad words for Jews",
-              "You're young, you have your whole life ahead of you, and your anal cavity is still taut yet malleable"
+              "You're young, you have your whole life ahead of you, and your anal cavity is still taut yet malleable",
+              "They’re just robots, {0.author.mention}! It’s OK to shoot them! They’re robots!........It’s a figure of speech, {0.author.mention}. They’re bureaucrats. I don’t respect them",
+              "What, so everyone’s supposed to sleep every single night now?",
+              "being nice is something stupid people do to hedge their bets",
+              "Hey, save your Rick rules for the ueh sheep-Ricks, Rick-pig.",
+              "Fuck you? No, no, no, no, no, fuck me!",
+              "Uncertainty is inherently unsustainable. Eventually, everything either is or isn't.",
+              "Think for yourselves. Don’t be sheep.",
+              "Me sleeping on these linens is the favor. I mean w-w-what are we vindicating? Comfort?",
+              "Two things I want to make very clear to everyone in this room. Never betray me and it's time to go.",
+              "{0.author.mention}, is there any light beer left? It's amazing what you miss while in prison..........no you're right. Where's the vodka?",
+              "So what's your origin? Did you fall into a vat of redundancy?",
+              "I was also late because of my drinking and mentioned it to.....no one.",
               ]
     return random.choice(phrase)
 
