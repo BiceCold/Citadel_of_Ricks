@@ -1,8 +1,10 @@
 import discord
 import random
+from rick_random_gif import random_gif
+import ID
 
 
-TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 client = discord.Client()
 
 def random_message():
@@ -33,12 +35,10 @@ def random_message():
               "{0.author.mention}, is there any light beer left? It's amazing what you miss while in prison..........no you're right. Where's the vodka?",
               "So what's your origin? Did you fall into a vat of redundancy?",
               "I was also late because of my drinking and mentioned it to.....no one.",
+              "Listen, {0.author.mention}, I hate to break it to you but what people call 'love' is just a chemical reaction that compels animals to breed. It hits hard, {0.author.mention}, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it. Break the cycle, {0.author.mention}. Rise above. Focus on science"
               ]
     return random.choice(phrase)
 
-
-wayup_url = 'http://i0.kym-cdn.com/photos/images/original/000/703/020/271.gif'
-embed = discord.Embed()
 
 politic_words = ["gun",
                  "housing",
@@ -50,33 +50,9 @@ politic_words = ["gun",
                  "rifle",
                  "protest"
                  ]
+embed = discord.Embed()
+wayup_url = 'http://i0.kym-cdn.com/photos/images/original/000/703/020/271.gif'
 
-def random_gifs():
-    gif = ["https://gph.is/2JOXLM0",
-           "https://gph.is/2IXXLYQ",
-           "https://gph.is/2qBHNMr",
-           "https://gph.is/2JLtUUO",
-           "https://gph.is/2H3r7EL",
-           "https://gph.is/2HBMBJU",
-           "https://gph.is/2IXaUBp",
-           "https://gph.is/2JOBX3o",
-           "https://gph.is/2JLujqi",
-           "https://gph.is/2H0vyUJ",
-           "https://gph.is/2JM9rPG",
-           "https://gph.is/2IZ7caB",
-           "https://gph.is/2qzCIUZ",
-           "https://gph.is/2HBUMG4",
-           "https://gph.is/2JOXVTC",
-           "https://gph.is/2H6nyOg",
-           "https://gph.is/2J06rhF",
-           "https://gph.is/2qvXN2C",
-           "https://gph.is/2H1pHdR",
-           "https://gph.is/2qzxk4a",
-           "https://gph.is/2qy5yVC",
-           "https://gph.is/2JN84Ah",
-           "https://gph.is/2qAk5Aj",
-           ]
-    return random.choice(gif)
 
 @client.event
 async def on_message(message):
@@ -91,16 +67,15 @@ async def on_message(message):
     if message.content.startswith('!quote'):
         msg2 = random_message().format(message)
         await client.send_message(message.channel, msg2)
-        
+
     if message.content.startswith('!gif'):
-        msg3 = random_gifs().format(message)
+        msg3 = random_gif().format(message)
         await client.send_message(message.channel, msg3)
 
     message_string = message.content.lower()
 
     for word in politic_words:
         if message_string.find(word) != -1:
-            #content is matched, embed gif
             embed.set_image(url=wayup_url)
             await client.send_message(message.channel, embed=embed)
 
@@ -118,3 +93,4 @@ async def on_ready():
     print('-----')
 
 client.run(TOKEN)
+
