@@ -1,0 +1,64 @@
+import random
+
+def warhammer():
+    min = 1
+    max = 10
+    roll = random.randint(min,max)
+    return roll
+
+def divine_smite():
+    min = 1
+    max = 8
+    roll = random.randint(min, max)*2
+    return roll
+
+def hunters_mark():
+    min = 1
+    max = 6
+    roll = random.randint(min, max)
+    return roll
+
+def attack_roll():
+    min = 1
+    max = 20
+    roll = random.randint(min, max)
+    return roll
+
+def confirm_damage(Strength_modifier):
+    hammer = warhammer()
+    divine = divine_smite()
+    hunter = hunters_mark()
+    strength = strength_modifier
+    confirmed_damage = hammer + divine + hunter + Strength_modifier
+    return confirmed_damage
+
+
+def fight(AC, Strength_modifier):
+    damage = 0
+    damage2 = 0
+    hit1 = attack_roll()
+    hit2 = attack_roll()
+    if hit1 < AC:
+        damage = 0
+    else:
+        damage = damage + confirm_damage(Strength_modifier)
+
+    if hit1 > AC and hit2 > AC:
+        damage2 = confirm_damage(Strength_modifier)
+    total_damage = damage + damage2
+
+    return(total_damage)
+
+def mean_damage(attack_rounds, AC, Strength_modifier):
+    total = 0
+    stage = 0
+    for rounds in range(0, attack_rounds):
+        dps = fight(AC, Strength_modifier)
+        stage += 1
+        total += dps
+    average = total/stage
+    print(total)
+    print(stage)
+    print(average)
+
+mean_damage(1000, 13, 3)
