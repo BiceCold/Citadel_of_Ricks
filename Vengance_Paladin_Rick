@@ -1,8 +1,6 @@
 import random
 import math
 
-# to run this, use the format = mean_damage(iterations, AC of enemy, strength modifier, level of spell slot used twice)
-
 strength_modifier = 3
 AC = 13
 
@@ -47,10 +45,16 @@ def fight(AC, Strength_modifier, spell_slots_level):
     if hit1 < AC:
         damage = 0
     else:
-        damage = damage + confirm_damage(Strength_modifier, spell_slots_level)
+        if hit1 == 20:
+            damage = damage + confirm_damage(0, spell_slots_level)*2 + strength_modifier
+        else:
+            damage = damage + confirm_damage(Strength_modifier, spell_slots_level)
 
     if hit1 > AC and hit2 > AC:
-        damage2 = confirm_damage(Strength_modifier, spell_slots_level)
+        if hit1 == 20:
+            damage = damage + confirm_damage(0, spell_slots_level)*2 + strength_modifier
+        else:
+            damage2 = confirm_damage(Strength_modifier, spell_slots_level)
     total_damage = damage + damage2
 
     return(total_damage)
@@ -67,3 +71,5 @@ def mean_damage(attack_rounds, AC, Strength_modifier, spell_slots_level):
     average = total/stage
     print(f"the most damage rolled was {max(totals_listed)}")
     print(f"The average damage was {average}")
+
+mean_damage(10000, 13, 3, 2)
