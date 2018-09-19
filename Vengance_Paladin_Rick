@@ -1,4 +1,10 @@
 import random
+import math
+
+# to run this, use the format = mean_damage(iterations, AC of enemy, strength modifier, level of spell slot used twice)
+
+strength_modifier = 3
+AC = 13
 
 def warhammer():
     min = 1
@@ -6,10 +12,10 @@ def warhammer():
     roll = random.randint(min,max)
     return roll
 
-def divine_smite():
+def divine_smite(spell_slots_level):
     min = 1
     max = 8
-    roll = random.randint(min, max)*2
+    roll = random.randint(min, max)*spell_slots_level
     return roll
 
 def hunters_mark():
@@ -24,16 +30,16 @@ def attack_roll():
     roll = random.randint(min, max)
     return roll
 
-def confirm_damage(Strength_modifier):
+def confirm_damage(Strength_modifier, spell_slots_level):
     hammer = warhammer()
-    divine = divine_smite()
+    divine = divine_smite(spell_slots_level)
     hunter = hunters_mark()
     strength = strength_modifier
     confirmed_damage = hammer + divine + hunter + Strength_modifier
     return confirmed_damage
 
 
-def fight(AC, Strength_modifier):
+def fight(AC, Strength_modifier, spell_slots_level):
     damage = 0
     damage2 = 0
     hit1 = attack_roll()
@@ -41,24 +47,23 @@ def fight(AC, Strength_modifier):
     if hit1 < AC:
         damage = 0
     else:
-        damage = damage + confirm_damage(Strength_modifier)
+        damage = damage + confirm_damage(Strength_modifier, spell_slots_level)
 
     if hit1 > AC and hit2 > AC:
-        damage2 = confirm_damage(Strength_modifier)
+        damage2 = confirm_damage(Strength_modifier, spell_slots_level)
     total_damage = damage + damage2
 
     return(total_damage)
 
-def mean_damage(attack_rounds, AC, Strength_modifier):
+def mean_damage(attack_rounds, AC, Strength_modifier, spell_slots_level):
     total = 0
     stage = 0
+    totals_listed = [0]
     for rounds in range(0, attack_rounds):
-        dps = fight(AC, Strength_modifier)
+        dps = fight(AC, Strength_modifier, spell_slots_level)
         stage += 1
         total += dps
+        totals_listed.append(dps)
     average = total/stage
-    print(total)
-    print(stage)
-    print(average)
-
-mean_damage(1000, 13, 3)
+    print(f"the most damage rolled was {max(totals_listed)}")
+    print(f"The average damage was {average}")
