@@ -13,7 +13,10 @@ def warhammer():
 def divine_smite(spell_slots_level):
     min = 1
     max = 8
-    roll = random.randint(min, max)*spell_slots_level
+    roll = random.randint(min, max)*2
+    if spell_slots_level == 2:
+        bonus = random.randint(min, max)
+        roll = roll + bonus
     return roll
 
 def hunters_mark():
@@ -37,11 +40,11 @@ def confirm_damage(Strength_modifier, spell_slots_level):
     return confirmed_damage
 
 
-def fight(AC, Strength_modifier, spell_slots_level):
+def fight(AC, Strength_modifier, spell_slots_level, attack_bonus):
     damage = 0
     damage2 = 0
-    hit1 = attack_roll()
-    hit2 = attack_roll()
+    hit1 = attack_roll() + attack_bonus
+    hit2 = attack_roll() + attack_bonus
     if hit1 < AC:
         damage = 0
     else:
@@ -59,12 +62,12 @@ def fight(AC, Strength_modifier, spell_slots_level):
 
     return(total_damage)
 
-def mean_damage(attack_rounds, AC, Strength_modifier, spell_slots_level):
+def mean_damage(attack_rounds, enemy_AC, Strength_modifier, spell_slots_level, attack_bonus):
     total = 0
     stage = 0
     totals_listed = [0]
     for rounds in range(0, attack_rounds):
-        dps = fight(AC, Strength_modifier, spell_slots_level)
+        dps = fight(enemy_AC, Strength_modifier, spell_slots_level, attack_bonus)
         stage += 1
         total += dps
         totals_listed.append(dps)
@@ -72,4 +75,4 @@ def mean_damage(attack_rounds, AC, Strength_modifier, spell_slots_level):
     print(f"the most damage rolled was {max(totals_listed)}")
     print(f"The average damage was {average}")
 
-mean_damage(10000, 13, 3, 2)
+mean_damage(attack_rounds=100000, enemy_AC=13, Strength_modifier=3, spell_slots_level=2, attack_bonus=6)
