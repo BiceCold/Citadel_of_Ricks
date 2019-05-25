@@ -21,3 +21,4 @@ Gif Rick
 1.  Add more gifs.
 
 2.  Create a class of Gif Rick that can be called by the citadel
+
