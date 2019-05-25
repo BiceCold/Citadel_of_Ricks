@@ -3,7 +3,7 @@ The citadel is a place for Ricks to hang out and wait to be summoned. Each Rick 
 
 In order for Anti-Politics Rick to work properly you must include a .env file in your project containing keys for imgur and discord. the format is:
 
-client_id = 'xxxxxxxxxxxxx'
+client_id = 'xxxxxxxxxxxxx' /n
 client_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 refresh_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 access_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
