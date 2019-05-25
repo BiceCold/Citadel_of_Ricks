@@ -1,2 +1,2 @@
 # Citadel_of_Ricks
-This is going to be my discord stuff, built in python, and starting with anti-politics Rick to clean up my channel that is meant for fun.
+The citadel is a place for Ricks to hang out and wait to be summoned. Each Rick will be callable in a discord bot.
