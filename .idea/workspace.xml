@@ -4,6 +4,7 @@
     <list default="true" id="6d9c1a69-c7e4-4b52-9ca7-740919b61bb4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Anti_Politics_Rick/anti_politics_rick.py" beforeDir="false" afterPath="$PROJECT_DIR$/Anti_Politics_Rick/anti_politics_rick.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Citadel_of_Ricks" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Anti_Politics_Rick/anti_politics_rick.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="364">
+              <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -76,11 +77,6 @@
             <path>
               <item name="Citadel_of_Ricks" type="b2602c69:ProjectViewProjectNode" />
               <item name="Citadel_of_Ricks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Citadel_of_Ricks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Citadel_of_Ricks" type="462c0819:PsiDirectoryNode" />
-              <item name="Anti_Politics_Rick" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -189,19 +185,27 @@
       <option name="project" value="LOCAL" />
       <updated>1558813470205</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated structure">
+      <created>1559793804671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559793804671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="32" y="73" width="1799" height="1087" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27832088" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26652452" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3281412" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281412" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -255,20 +259,8 @@
     <entry file="file://$PROJECT_DIR$/Gif_Rick/rick_random_gif" />
     <entry file="file://$PROJECT_DIR$/anti_politics_rick.py" />
     <entry file="file://$PROJECT_DIR$/Citadel_of_Ricks/configs.py" />
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/imgurpython/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/imgurpython/client.py" />
+    <entry file="file://$PROJECT_DIR$/.env" />
     <entry file="file://$PROJECT_DIR$/Citadel_of_Ricks.py" />
     <entry file="file://$PROJECT_DIR$/Roadmap.html" />
     <entry file="file://$PROJECT_DIR$/Gif_Rick/rick_random_gif.py">
@@ -313,8 +305,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Anti_Politics_Rick/anti_politics_rick.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="364">
+          <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
