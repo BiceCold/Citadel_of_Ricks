@@ -49,15 +49,13 @@ async def on_ready():
 
 
 def give_him_life():
-    try:
-        client.run(TOKEN)
-    except KeyboardInterrupt:
-        print("you killed me")
-        client.logout()
-    finally:
-        client.close()
+    while not client.is_ready():
+        try:
+            client.run(TOKEN)
+        except KeyboardInterrupt:
+            print("you killed me")
+            client.logout()
+        finally:
+            client.close()
+            client.run(TOKEN)
 
-
-if __name__ == "__main__":
-
-    give_him_life()
