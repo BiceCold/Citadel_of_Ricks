@@ -57,3 +57,7 @@ def give_him_life():
     finally:
         client.close()
 
+
+if __name__ == "__main__":
+
+    give_him_life()
