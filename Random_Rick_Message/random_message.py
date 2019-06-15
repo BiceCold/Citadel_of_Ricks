@@ -31,4 +31,5 @@ def random_message():
               "I was also late because of my drinking and mentioned it to.....no one.",
               "Listen, {0.author.mention}, I hate to break it to you but what people call 'love' is just a chemical reaction that compels animals to breed. It hits hard, {0.author.mention}, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it. Break the cycle, {0.author.mention}. Rise above. Focus on science"
               ]
+
     return random.choice(phrase)
