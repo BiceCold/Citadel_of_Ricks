@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Lord Jeremy Bice\Source\Repos\Citadel_of_Ricks\env"
+VIRTUAL_ENV="C:\Program Files\GitHub\Citadel_of_Ricks\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
